@@ -2,12 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-
+[assembly: InternalsVisibleTo("BackpackProblemGUI"), InternalsVisibleTo("BackpackProblemUnitTests")]
 namespace BackpackProblem
 {
-    public class Backpack
+    internal class Backpack
     {
         public List<Item> Items { get; }
         readonly int Capacity;
