@@ -15,12 +15,10 @@ namespace BackpackProblemGUI
     {
         private int backpack_size;
         private int number_of_items;
-        private List<Item> items;
 
         public MainFrame()
         {
             InitializeComponent();
-            this.CenterToScreen();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -30,12 +28,15 @@ namespace BackpackProblemGUI
 
         private void StartButtonClick(object sender, EventArgs e)
         {
-            items = BackpackProblem.Program.CreateItems(number_of_items);
+            List<Item> items = BackpackProblem.Program.CreateItems(number_of_items);
             Backpack backpack = new Backpack(backpack_size);
+
             BackpackProblem.Program.SortItems(items);
             backpack.AddToBackpack(items);
+
             ListOfItemsBox.Text = string.Join(Environment.NewLine, items);
             BackpackListBox.Text = backpack.ToString();
+
             int current_filling = 0;
             foreach (Item item in backpack.Items)
                 current_filling += item.Value * item.Weight;
