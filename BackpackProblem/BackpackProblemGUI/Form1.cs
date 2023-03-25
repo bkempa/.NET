@@ -20,11 +20,12 @@ namespace BackpackProblemGUI
         public MainFrame()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void StartButtonClick(object sender, EventArgs e)

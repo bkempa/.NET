@@ -54,6 +54,7 @@
             // 
             // BackpackSizeLabel
             // 
+            BackpackSizeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             BackpackSizeLabel.AutoSize = true;
             BackpackSizeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             BackpackSizeLabel.Location = new System.Drawing.Point(310, 14);
@@ -64,6 +65,7 @@
             // 
             // NumberOfItemsLabel
             // 
+            NumberOfItemsLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             NumberOfItemsLabel.AutoSize = true;
             NumberOfItemsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             NumberOfItemsLabel.Location = new System.Drawing.Point(288, 46);
@@ -74,6 +76,7 @@
             // 
             // BackpackFillingLabel
             // 
+            BackpackFillingLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             BackpackFillingLabel.AutoSize = true;
             BackpackFillingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             BackpackFillingLabel.Location = new System.Drawing.Point(287, 419);
@@ -96,6 +99,7 @@
             // 
             // BackpackFillingBar
             // 
+            this.BackpackFillingBar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BackpackFillingBar.Location = new System.Drawing.Point(451, 419);
             this.BackpackFillingBar.Name = "BackpackFillingBar";
             this.BackpackFillingBar.Size = new System.Drawing.Size(265, 20);
@@ -105,6 +109,7 @@
             // 
             // ListOfItemsBox
             // 
+            this.ListOfItemsBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ListOfItemsBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ListOfItemsBox.Location = new System.Drawing.Point(68, 163);
             this.ListOfItemsBox.Multiline = true;
@@ -115,6 +120,7 @@
             // 
             // BackpackListBox
             // 
+            this.BackpackListBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BackpackListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.BackpackListBox.Location = new System.Drawing.Point(451, 163);
             this.BackpackListBox.Multiline = true;
@@ -125,6 +131,7 @@
             // 
             // BackpackSizeUpDown
             // 
+            this.BackpackSizeUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BackpackSizeUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.BackpackSizeUpDown.Location = new System.Drawing.Point(447, 12);
             this.BackpackSizeUpDown.Name = "BackpackSizeUpDown";
@@ -134,6 +141,7 @@
             // 
             // NumberOfItemsUpDown
             // 
+            this.NumberOfItemsUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NumberOfItemsUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.NumberOfItemsUpDown.Location = new System.Drawing.Point(447, 44);
             this.NumberOfItemsUpDown.Name = "NumberOfItemsUpDown";
@@ -143,6 +151,7 @@
             // 
             // FillingPercentageLabel
             // 
+            this.FillingPercentageLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.FillingPercentageLabel.AutoSize = true;
             this.FillingPercentageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.FillingPercentageLabel.Location = new System.Drawing.Point(722, 419);
@@ -153,6 +162,7 @@
             // 
             // ArrowPictureBox
             // 
+            this.ArrowPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ArrowPictureBox.Image = global::BackpackProblemGUI.Properties.Resources.right_arrow_icon;
             this.ArrowPictureBox.Location = new System.Drawing.Point(339, 247);
             this.ArrowPictureBox.Name = "ArrowPictureBox";
@@ -163,6 +173,7 @@
             // 
             // ItemsPictureBox
             // 
+            this.ItemsPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ItemsPictureBox.Image = global::BackpackProblemGUI.Properties.Resources.item_icon;
             this.ItemsPictureBox.Location = new System.Drawing.Point(153, 72);
             this.ItemsPictureBox.Name = "ItemsPictureBox";
@@ -173,6 +184,7 @@
             // 
             // BackpackPictureBox
             // 
+            this.BackpackPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BackpackPictureBox.Image = global::BackpackProblemGUI.Properties.Resources.backpack_icon;
             this.BackpackPictureBox.Location = new System.Drawing.Point(546, 72);
             this.BackpackPictureBox.Name = "BackpackPictureBox";
