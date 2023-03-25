@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BackpackProblem\BackpackProblem.csproj">
+      <Project>{88117c08-6044-4677-9ed0-341b3c4981fd}</Project>
+      <Name>BackpackProblem</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backpack_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right_arrow_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backpack_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backpack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backpack_icon2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

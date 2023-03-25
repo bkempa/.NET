@@ -35,7 +35,7 @@ namespace BackpackProblem
 
         public static List<Item> CreateItems(int number)
         {
-            if (number > 0)
+            if (number >= 0)
             {
                 List<Item> items = new List<Item>();
                 Random rand = new Random();

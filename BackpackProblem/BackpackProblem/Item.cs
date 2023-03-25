@@ -35,7 +35,7 @@ namespace BackpackProblem
 
         public override string ToString()
         {
-            return "value: " + Value + ", weight: " + Weight + ", profitability = " + (double)Value / (double)Weight;
+            return "value: " + Value + ", weight: " + Weight + ", profit = " + String.Format("{0:0.###}", (double)Value / (double)Weight);
         }
     }
 }

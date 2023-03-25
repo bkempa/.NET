@@ -15,7 +15,7 @@ namespace BackpackProblem
 
         public Backpack(int size)
         {
-            if (size > 0)
+            if (size >= 0)
             {
                 Items = new List<Item>();
                 Capacity = size;
@@ -28,7 +28,7 @@ namespace BackpackProblem
         {
             string str = "";
             foreach (Item i in Items)
-                str += i + "\n";
+                str += i + Environment.NewLine;
             return str;
         }
 
