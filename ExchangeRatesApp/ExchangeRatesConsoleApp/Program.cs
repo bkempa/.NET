@@ -1,11 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Net.Http;
-using System.Runtime.InteropServices.ComTypes;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ExchangeRatesConsoleApp
@@ -16,21 +11,14 @@ namespace ExchangeRatesConsoleApp
         {
             HttpClient client = new HttpClient();
             string call, currencyCode, startDate, endDate;
-            startDate = "2023-04-04";
-            endDate = startDate;
+            startDate = "2023-04-01";
+            endDate = "2023-04-07";
             currencyCode = "USD";
 
-            if (DateTime.Today.Equals(DateTime.Parse(startDate)))
-                call = $"http://api.nbp.pl/api/exchangerates/rates/A/{currencyCode}/today/?format=json";
-            else
-                call = $"http://api.nbp.pl/api/exchangerates/rates/A/{currencyCode}/{startDate}/{endDate}/?format=json";
+            call = $"http://api.nbp.pl/api/exchangerates/rates/A/{currencyCode}/{startDate}/{endDate}/?format=json";
             string response = await client.GetStringAsync(call);
-
-            ApiResponse apiResponse = JsonConvert.DeserializeObject<ApiResponse>(response);
-            foreach (Rate rate in apiResponse.rates)
-            {
-                Console.WriteLine(rate.ToString());
-            }
+            Currency currency = JsonConvert.DeserializeObject<Currency>(response);
+            Console.WriteLine(currency.ToString());
             Console.ReadKey();
         }
     }

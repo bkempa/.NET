@@ -9,18 +9,18 @@ namespace ExchangeRatesConsoleApp
 {
     internal class Rate
     {
-        public DateTime effectiveDate { set; get; }
-        public double mid { set; get; }
+        public DateTime EffectiveDate { set; get; }
+        public double Mid { set; get; }
 
-        [JsonConstructor] public Rate(DateTime date, double mid)
+        public Rate(DateTime date, double mid)
         {
-            this.effectiveDate = date;
-            this.mid = mid;
+            this.EffectiveDate = date;
+            this.Mid = mid;
         }
 
         public override string ToString()
         {
-            return effectiveDate.ToShortDateString() + ": " + mid.ToString() + " zł";
+            return "stan na " + EffectiveDate.ToShortDateString() + ": " + Mid.ToString() + " zł";
         }
     }
 }
