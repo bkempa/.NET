@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
 namespace ExchangeRatesConsoleApp
@@ -16,9 +17,17 @@ namespace ExchangeRatesConsoleApp
             currencyCode = "USD";
 
             call = $"http://api.nbp.pl/api/exchangerates/rates/A/{currencyCode}/{startDate}/{endDate}/?format=json";
-            string response = await client.GetStringAsync(call);
-            Currency currency = JsonConvert.DeserializeObject<Currency>(response);
-            Console.WriteLine(currency.ToString());
+            var response = await client.GetAsync(call);
+            if (response.IsSuccessStatusCode)
+            {
+                string responseString = await response.Content.ReadAsStringAsync();
+                Currency currency = JsonConvert.DeserializeObject<Currency>(responseString);
+                Console.WriteLine(currency.ToString());
+            }
+            else
+            {
+                Console.WriteLine("Brak danych dla wskazanej daty");
+            }
             Console.ReadKey();
         }
     }

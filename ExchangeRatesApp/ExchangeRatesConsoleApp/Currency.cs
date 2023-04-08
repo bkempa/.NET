@@ -1,10 +1,8 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("EchangeRatesAppGUI")]
 namespace ExchangeRatesConsoleApp
 {
     internal class Currency
@@ -14,7 +12,7 @@ namespace ExchangeRatesConsoleApp
         public Rate[] Rates { get; set; }
 
 
-        public Currency(string table, string currency, string code, Rate[] rates)
+        public Currency(string currency, string code, Rate[] rates)
         {
             CurrencyName = currency;
             CurrencyCode = code;
@@ -23,7 +21,7 @@ namespace ExchangeRatesConsoleApp
 
         public override string ToString()
         {
-            return this.CurrencyName + " (" + this.CurrencyCode + ")\n\t" + string.Join("\n\t", Rates.Select(r => r.ToString()).ToArray());
+            return this.CurrencyName + " (" + this.CurrencyCode + ")" + Environment.NewLine +"\t" + string.Join(Environment.NewLine + "\t", Rates.Select(r => r.ToString()).ToArray());
         }
     }
 }
