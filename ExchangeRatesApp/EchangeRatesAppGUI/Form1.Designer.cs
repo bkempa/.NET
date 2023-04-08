@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label startDateLabel;
-            System.Windows.Forms.Label endDateLabel;
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.startDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.endDatePicker = new System.Windows.Forms.DateTimePicker();
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.startButton = new System.Windows.Forms.Button();
             this.getFromTodayCheckBox = new System.Windows.Forms.CheckBox();
@@ -44,7 +42,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             startDateLabel = new System.Windows.Forms.Label();
-            endDateLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
@@ -56,18 +53,27 @@
             startDateLabel.AutoSize = true;
             startDateLabel.Location = new System.Drawing.Point(8, 68);
             startDateLabel.Name = "startDateLabel";
-            startDateLabel.Size = new System.Drawing.Size(91, 13);
+            startDateLabel.Size = new System.Drawing.Size(69, 13);
             startDateLabel.TabIndex = 8;
-            startDateLabel.Text = "Data początkowa";
+            startDateLabel.Text = "Wybierz datę";
             // 
-            // endDateLabel
+            // label1
             // 
-            endDateLabel.AutoSize = true;
-            endDateLabel.Location = new System.Drawing.Point(11, 107);
-            endDateLabel.Name = "endDateLabel";
-            endDateLabel.Size = new System.Drawing.Size(77, 13);
-            endDateLabel.TabIndex = 9;
-            endDateLabel.Text = "Data końcowa";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(231, 9);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(66, 13);
+            label1.TabIndex = 12;
+            label1.Text = "Wybór walut";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(535, 9);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(61, 13);
+            label2.TabIndex = 13;
+            label2.Text = "Kursy walut";
             // 
             // startDatePicker
             // 
@@ -77,16 +83,6 @@
             this.startDatePicker.Size = new System.Drawing.Size(141, 20);
             this.startDatePicker.TabIndex = 0;
             this.startDatePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // endDatePicker
-            // 
-            this.endDatePicker.Location = new System.Drawing.Point(11, 123);
-            this.endDatePicker.MaxDate = new System.DateTime(2023, 4, 7, 0, 0, 0, 0);
-            this.endDatePicker.Name = "endDatePicker";
-            this.endDatePicker.Size = new System.Drawing.Size(141, 20);
-            this.endDatePicker.TabIndex = 1;
-            this.endDatePicker.Value = new System.DateTime(2023, 4, 7, 0, 0, 0, 0);
-            this.endDatePicker.ValueChanged += new System.EventHandler(this.endDatePicker_ValueChanged);
             // 
             // chart
             // 
@@ -102,7 +98,7 @@
             // 
             // startButton
             // 
-            this.startButton.Location = new System.Drawing.Point(44, 172);
+            this.startButton.Location = new System.Drawing.Point(44, 133);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(75, 23);
             this.startButton.TabIndex = 4;
@@ -113,7 +109,7 @@
             // getFromTodayCheckBox
             // 
             this.getFromTodayCheckBox.AutoSize = true;
-            this.getFromTodayCheckBox.Location = new System.Drawing.Point(11, 149);
+            this.getFromTodayCheckBox.Location = new System.Drawing.Point(11, 110);
             this.getFromTodayCheckBox.Name = "getFromTodayCheckBox";
             this.getFromTodayCheckBox.Size = new System.Drawing.Size(137, 17);
             this.getFromTodayCheckBox.TabIndex = 5;
@@ -189,28 +185,10 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(233, 98);
+            this.tabPage2.Size = new System.Drawing.Size(233, 203);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(231, 9);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(66, 13);
-            label1.TabIndex = 12;
-            label1.Text = "Wybór walut";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(535, 9);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(61, 13);
-            label2.TabIndex = 13;
-            label2.Text = "Kursy walut";
             // 
             // Form1
             // 
@@ -221,12 +199,10 @@
             this.Controls.Add(label1);
             this.Controls.Add(this.currenciesOutput);
             this.Controls.Add(this.currenciesCheckedListBox);
-            this.Controls.Add(endDateLabel);
             this.Controls.Add(startDateLabel);
             this.Controls.Add(this.getFromTodayCheckBox);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.chart);
-            this.Controls.Add(this.endDatePicker);
             this.Controls.Add(this.startDatePicker);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -242,7 +218,6 @@
         #endregion
 
         private System.Windows.Forms.DateTimePicker startDatePicker;
-        private System.Windows.Forms.DateTimePicker endDatePicker;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.CheckBox getFromTodayCheckBox;

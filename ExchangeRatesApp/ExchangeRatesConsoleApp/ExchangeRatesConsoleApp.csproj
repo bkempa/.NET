@@ -56,7 +56,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CurrenciesDatabase.cs" />
     <Compile Include="Currency.cs" />
+    <Compile Include="Migrations\202304081435499_InitialCreate.cs" />
+    <Compile Include="Migrations\202304081435499_InitialCreate.designer.cs">
+      <DependentUpon>202304081435499_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304081744164_ToOneRate.cs" />
+    <Compile Include="Migrations\202304081744164_ToOneRate.designer.cs">
+      <DependentUpon>202304081744164_ToOneRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rate.cs" />
@@ -64,6 +74,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202304081435499_InitialCreate.resx">
+      <DependentUpon>202304081435499_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304081744164_ToOneRate.resx">
+      <DependentUpon>202304081744164_ToOneRate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

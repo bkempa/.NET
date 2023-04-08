@@ -15,6 +15,8 @@ namespace ExchangeRatesConsoleApp
             this.Mid = mid;
         }
 
+        public Rate() { }
+
         public override string ToString()
         {
             return "stan na " + EffectiveDate.ToShortDateString() + ": " + Mid.ToString() + " zł";
